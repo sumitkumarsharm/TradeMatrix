@@ -14,20 +14,20 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-10 text-md font-medium">
-          <Link className="hover:text-blue-600 transition" to="/about">
-            About
-          </Link>
           <Link className="hover:text-blue-600 transition" to="/open-account">
             Signup
           </Link>
-          <Link className="hover:text-blue-600 transition" to="/support">
-            Support
+          <Link className="hover:text-blue-600 transition" to="/about">
+            About
+          </Link>
+          <Link className="hover:text-blue-600 transition" to="/products">
+            Products
           </Link>
           <Link className="hover:text-blue-600 transition" to="/pricing">
             Pricing
           </Link>
-          <Link className="hover:text-blue-600 transition" to="/products">
-            Products
+          <Link className="hover:text-blue-600 transition" to="/support">
+            Support
           </Link>
         </div>
 
@@ -53,7 +53,13 @@ const Navbar = () => {
           >
             About
           </Link>
-
+          <Link
+            onClick={() => setOpen(false)}
+            className="hover:text-blue-600"
+            to="/products"
+          >
+            Products
+          </Link>
           <Link
             onClick={() => setOpen(false)}
             className="hover:text-blue-600"
@@ -67,13 +73,6 @@ const Navbar = () => {
             to="/pricing"
           >
             Pricing
-          </Link>
-          <Link
-            onClick={() => setOpen(false)}
-            className="hover:text-blue-600"
-            to="/products"
-          >
-            Products
           </Link>
         </div>
       )}

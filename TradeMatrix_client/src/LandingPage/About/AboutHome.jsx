@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AboutHome = () => {
   return (
-    <section className="w-full bg-white pt-26 pb-20 md:pt-34">
+    <section className="w-full bg-white pt-26 pb-10 md:pb-20 md:pt-34">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed">
           We pioneered the discount broking model in India. <br />
