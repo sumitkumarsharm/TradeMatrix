@@ -8,8 +8,7 @@ const OpenAccount = () => {
       </h2>
 
       <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-        Modern trading platform, ₹0 investments, and just ₹20 for intraday &
-        derivatives.
+        Modern trading platform, ₹0 investments & ₹20 intraday.
       </p>
 
       <button className="mt-8 px-8 py-3 bg-blue-600 text-white font-medium text-lg rounded-md shadow hover:bg-blue-700 transition-all">

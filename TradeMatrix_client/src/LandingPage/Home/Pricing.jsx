@@ -8,25 +8,21 @@ const Pricing = () => {
   return (
     <section className="w-full py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* LEFT SECTION */}
         <div className="flex flex-col gap-4 text-center md:text-left">
-          <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">
             Unbeatable pricing
-          </h1>
+          </h2>
 
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
-            We pioneered the concept of discount broking and price transparency
-            in India. Flat fees and no hidden charges.
+            Flat fees, price transparency, and zero hidden charges.
           </p>
         </div>
 
-        {/* RIGHT SECTION */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          {/* ITEM 1 */}
           <div className="flex flex-col items-center text-center gap-3">
             <img
               src={img1}
-              alt="Free account opening"
+              alt="Free account opening illustration"
               className="w-24 md:w-28"
             />
             <p className="text-gray-600 text-sm md:text-base">
@@ -34,29 +30,30 @@ const Pricing = () => {
             </p>
           </div>
 
-          {/* ITEM 2 */}
           <div className="flex flex-col items-center text-center gap-3">
             <img
               src={img1}
-              alt="Free equity delivery"
+              alt="Free equity delivery feature"
               className="w-24 md:w-28"
             />
             <p className="text-gray-600 text-sm md:text-base">
-              Free equity delivery <br /> & direct mutual funds
+              Free equity delivery & direct mutual funds
             </p>
           </div>
 
-          {/* ITEM 3 */}
           <div className="flex flex-col items-center text-center gap-3">
-            <img src={img2} alt="Intraday and F&O" className="w-24 md:w-28" />
+            <img
+              src={img2}
+              alt="Intraday and F&O low cost"
+              className="w-24 md:w-28"
+            />
             <p className="text-gray-600 text-sm md:text-base">
-              Intraday & F&O <br /> ₹20 only
+              Intraday & F&O ₹20 only
             </p>
           </div>
         </div>
       </div>
 
-      {/* CTA BUTTON */}
       <div className="px-6 md:px-10 mt-10 text-center md:text-left">
         <Link
           to="/open-account"

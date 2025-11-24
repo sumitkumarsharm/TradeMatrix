@@ -9,7 +9,7 @@ const Education = () => {
         <div className="flex justify-center md:justify-start">
           <img
             src={EducationImage}
-            alt="Education Illustration"
+            alt="Market education and learning resources"
             className="w-64 md:w-full max-w-md object-contain"
           />
         </div>
@@ -20,27 +20,26 @@ const Education = () => {
           </h2>
 
           <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-lg mx-auto md:mx-0">
-            Varsity, the largest online stock market education book in the world
-            covering everything from the basics to advanced trading.
+            Varsity: The largest online stock market education book in the
+            world.
           </p>
 
           <Link
             to="#"
             className="text-blue-600 font-medium text-base md:text-lg hover:underline"
           >
-            Varsity →
+            Explore Varsity →
           </Link>
 
           <p className="text-gray-600 leading-relaxed text-base md:text-lg max-w-lg mx-auto md:mx-0">
-            TradingQ&A, the most active trading and investment community in
-            India for all your market-related queries.
+            TradingQ&A: Most active investing & trading community in India.
           </p>
 
           <Link
             to="#"
             className="text-blue-600 font-medium text-base md:text-lg hover:underline"
           >
-            TradingQ&A →
+            Visit TradingQ&A →
           </Link>
         </div>
       </div>

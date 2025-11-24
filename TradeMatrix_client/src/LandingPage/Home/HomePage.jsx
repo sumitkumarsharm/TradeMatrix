@@ -7,13 +7,13 @@ import Pricing from "./Pricing";
 
 const HomePage = () => {
   return (
-    <>
+    <main>
       <Hero />
       <Stats />
       <Pricing />
       <Education />
       <OpenAccount />
-    </>
+    </main>
   );
 };
 
