@@ -7,6 +7,7 @@ import PricingPage from "./LandingPage/Pricing/PricingPage";
 import ProductPage from "./LandingPage/Products/ProductPage";
 import SignUppage from "./LandingPage/SignUp/SignUppage";
 import SupportPage from "./LandingPage/Support/SupportPage";
+import PageNotFound from "./components/PageNotFound";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/products" element={<ProductPage />} />
           <Route path="/open-account" element={<SignUppage />} />
           <Route path="/support" element={<SupportPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </div>

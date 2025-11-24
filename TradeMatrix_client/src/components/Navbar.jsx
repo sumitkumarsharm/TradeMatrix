@@ -42,17 +42,18 @@ const Navbar = () => {
           <Link
             onClick={() => setOpen(false)}
             className="hover:text-blue-600"
-            to="/about"
-          >
-            About
-          </Link>
-          <Link
-            onClick={() => setOpen(false)}
-            className="hover:text-blue-600"
             to="/open-account"
           >
             Signup
           </Link>
+          <Link
+            onClick={() => setOpen(false)}
+            className="hover:text-blue-600"
+            to="/about"
+          >
+            About
+          </Link>
+
           <Link
             onClick={() => setOpen(false)}
             className="hover:text-blue-600"
