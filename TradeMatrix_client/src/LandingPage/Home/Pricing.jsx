@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* LEFT SECTION */}
         <div className="flex flex-col gap-4">
-          <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">
+          <h1 className="text-xl md:text-3xl font-semibold text-gray-900">
             Unbeatable pricing
           </h1>
 
@@ -24,13 +24,11 @@ const Pricing = () => {
 
         {/* RIGHT SECTION */}
         <div className="flex items-center justify-between gap-8">
-          {/* ITEM 1 */}
           <div className="flex items-center flex-col text-center">
             <img src={img1} alt="Free account opening" className="w-30 " />
             <p className="text-gray-600 text-xs">Free account opening</p>
           </div>
 
-          {/* ITEM 2 */}
           <div className="flex flex-col items-center text-center">
             <img
               src={img1}
@@ -42,7 +40,6 @@ const Pricing = () => {
             </p>
           </div>
 
-          {/* ITEM 3 */}
           <div className="flex  flex-col items-center text-center">
             <img
               src={img2}

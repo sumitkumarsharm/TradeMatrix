@@ -11,7 +11,7 @@ const HomePage = () => {
       <Hero />
       <Stats />
       <Pricing />
-      {/* <Education /> */}
+      <Education />
       {/* <OpenAccount /> */}
     </>
   );
