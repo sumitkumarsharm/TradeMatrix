@@ -12,7 +12,7 @@ const HomePage = () => {
       <Stats />
       <Pricing />
       <Education />
-      {/* <OpenAccount /> */}
+      <OpenAccount />
     </>
   );
 };
