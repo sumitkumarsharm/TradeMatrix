@@ -1,7 +1,14 @@
 import React from "react";
+import AboutHome from "./AboutHome";
+import AboutPeople from "./AboutPeople";
 
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <div>
+      <AboutHome />
+      <AboutPeople />
+    </div>
+  );
 };
 
 export default AboutPage;

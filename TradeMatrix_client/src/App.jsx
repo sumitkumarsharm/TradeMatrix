@@ -10,16 +10,18 @@ import SupportPage from "./LandingPage/Support/SupportPage";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/products" element={<ProductPage />} />
-        <Route path="/open-account" element={<SignUppage />} />
-        <Route path="/support" element={<SupportPage />} />
-      </Route>
-    </Routes>
+    <div className="w-full max-w-7xl mx-auto">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/open-account" element={<SignUppage />} />
+          <Route path="/support" element={<SupportPage />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };
 
