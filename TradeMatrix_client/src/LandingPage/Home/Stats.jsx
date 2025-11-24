@@ -4,7 +4,7 @@ import pressLogo from "../../assets/press-logo.png";
 
 const Stats = () => {
   return (
-    <section className="w-full py-20 bg-white">
+    <section className="w-full py-20 bg-white px-2 sm:px-0">
       <div className="max-w-7xl mx-auto px-6 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-8">
@@ -58,7 +58,7 @@ const Stats = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex  justify-center items-center md:justify-end">
+        <div className="flex  justify-center items-center md:justify-end ">
           <img src={stats} alt="stats graphic" className="w-full" />
         </div>
       </div>
