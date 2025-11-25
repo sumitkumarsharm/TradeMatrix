@@ -9,7 +9,7 @@ const ProductRightSection = ({
   learnMore,
 }) => {
   return (
-    <section className="w-full py-20 bg-white">
+    <section className="w-full  bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <article className="flex flex-col gap-6 text-left">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">

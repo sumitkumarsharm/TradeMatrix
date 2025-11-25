@@ -12,7 +12,7 @@ const ProductLeftSection = ({
   appStore,
 }) => {
   return (
-    <section className="w-full py-20 mx-auto bg-white">
+    <section className="w-full mx-auto bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-28 items-center">
         {/* IMAGE LEFT */}
         <article className="flex justify-center md:justify-start">
