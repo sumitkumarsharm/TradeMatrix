@@ -2,8 +2,7 @@ import React from "react";
 
 const PricingHome = () => {
   return (
-    <section className="w-full bg-white pt-32 pb-28 ">
-      {/* Header */}
+    <section className="w-full bg-white pt-32 pb-28">
       <div className="flex flex-col items-center text-center gap-3 mb-16">
         <h1 className="text-xl md:text-3xl font-medium text-gray-900">
           Charges and Taxes
@@ -13,9 +12,7 @@ const PricingHome = () => {
         </p>
       </div>
 
-      {/* Pricing Cards */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-16 place-items-center">
-        {/* Card 1 */}
         <div className="flex flex-col items-center text-center max-w-sm">
           <div className="relative">
             <h2 className="text-7xl font-semibold text-orange-500">₹0</h2>
@@ -32,7 +29,6 @@ const PricingHome = () => {
           </p>
         </div>
 
-        {/* Card 2 */}
         <div className="flex flex-col items-center text-center max-w-sm">
           <div className="relative">
             <h2 className="text-7xl font-semibold text-orange-500">₹20</h2>
@@ -49,7 +45,6 @@ const PricingHome = () => {
           </p>
         </div>
 
-        {/* Card 3 */}
         <div className="flex flex-col items-center text-center max-w-sm">
           <div className="relative">
             <h2 className="text-7xl font-semibold text-orange-500">₹0</h2>
