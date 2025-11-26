@@ -60,19 +60,20 @@ const Navbar = () => {
           >
             Products
           </Link>
-          <Link
-            onClick={() => setOpen(false)}
-            className="hover:text-blue-600"
-            to="/support"
-          >
-            Support
-          </Link>
+
           <Link
             onClick={() => setOpen(false)}
             className="hover:text-blue-600"
             to="/pricing"
           >
             Pricing
+          </Link>
+          <Link
+            onClick={() => setOpen(false)}
+            className="hover:text-blue-600"
+            to="/support"
+          >
+            Support
           </Link>
         </div>
       )}

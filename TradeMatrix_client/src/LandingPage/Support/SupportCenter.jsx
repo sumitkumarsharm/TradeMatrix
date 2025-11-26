@@ -22,7 +22,7 @@ const sections = [
     icon: <PlusCircle />,
   },
   {
-    title: "Your Zerodha Account",
+    title: "Your TeadeMatrix Account",
     items: [
       "Resident individual",
       "Minor",
@@ -100,31 +100,28 @@ const SupportCenter = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-10">
-      {/* LEFT SIDE */}
       <div className="md:col-span-2 flex flex-col gap-4">
         {sections.map((sec, index) => (
           <div
             key={index}
-            className="border rounded-md bg-white transition-all duration-200 hover:scale-[1.01] hover:shadow-md cursor-pointer overflow-hidden"
+            className="border bg-white transition-all duration-200 hover:scale-[1.01] hover:shadow-md cursor-pointer overflow-hidden"
           >
-            {/* Header */}
             <button
               onClick={() => toggleSection(index)}
-              className="w-full flex items-center justify-between px-4 py-3 bg-whitetransition duration-300"
+              className="w-full flex items-center justify-between px-4 py-3 bg-whitetransition transition-all  duration-300"
             >
               <div className="flex items-center gap-2">
-                <span className="text-gray-600">{sec.icon}</span>
+                <span className="text-blue-600">{sec.icon}</span>
                 <span className="font-medium text-gray-900">{sec.title}</span>
               </div>
 
               {openSection === index ? (
-                <ChevronUp size={20} className="text-gray-600" />
+                <ChevronUp size={20} className="text-blue-600" />
               ) : (
-                <ChevronDown size={20} className="text-gray-600" />
+                <ChevronDown size={20} className="text-blue-600" />
               )}
             </button>
 
-            {/* Smooth Dropdown */}
             <div
               className={`
                 overflow-hidden transition-all duration-300 ease-in-out
@@ -149,10 +146,9 @@ const SupportCenter = () => {
         ))}
       </div>
 
-      {/* RIGHT SIDE */}
       <div className="md:col-span-1 flex flex-col gap-6">
         {/* Notices Box */}
-        <div className="border-l-4 border-orange-500 bg-orange-50 px-4 py-4 rounded-sm shadow-sm">
+        <div className="border-l-4 border-orange-500 bg-orange-50 px-4 py-4 shadow-sm">
           <ul className="list-disc ml-4 text-gray-800">
             {notices.map((notice, i) => (
               <li
@@ -165,7 +161,7 @@ const SupportCenter = () => {
           </ul>
         </div>
 
-        <div className="border rounded-md shadow-sm overflow-hidden">
+        <div className="border  shadow-sm overflow-hidden">
           <h3 className="px-4 py-2 bg-gray-100 font-medium text-gray-800 border-b">
             Quick links
           </h3>
