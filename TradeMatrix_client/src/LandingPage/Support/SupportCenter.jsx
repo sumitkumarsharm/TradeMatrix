@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import {
+  PlusCircle,
+  UserCircle2,
+  LassoSelect,
+  IndianRupeeIcon,
+  CircleArrowOutUpRight,
+  EclipseIcon,
+} from "lucide-react";
 
 const sections = [
   {
@@ -11,26 +19,62 @@ const sections = [
       "Company, Partnership, HUF and LLP",
       "Glossary",
     ],
+    icon: <PlusCircle />,
   },
   {
     title: "Your Zerodha Account",
-    items: [],
+    items: [
+      "Resident individual",
+      "Minor",
+      "Non Resident Indian (NRI)",
+      "Company, Partnership, HUF and LLP",
+      "Glossary",
+    ],
+    icon: <UserCircle2 />,
   },
   {
     title: "Kite",
-    items: [],
+    items: [
+      "Resident individual",
+      "Minor",
+      "Non Resident Indian (NRI)",
+      "Company, Partnership, HUF and LLP",
+      "Glossary",
+    ],
+    icon: <LassoSelect />,
   },
   {
     title: "Funds",
-    items: [],
+    items: [
+      "Resident individual",
+      "Minor",
+      "Non Resident Indian (NRI)",
+      "Company, Partnership, HUF and LLP",
+      "Glossary",
+    ],
+    icon: <IndianRupeeIcon />,
   },
   {
     title: "Console",
-    items: [],
+    items: [
+      "Resident individual",
+      "Minor",
+      "Non Resident Indian (NRI)",
+      "Company, Partnership, HUF and LLP",
+      "Glossary",
+    ],
+    icon: <CircleArrowOutUpRight />,
   },
   {
     title: "Coin",
-    items: [],
+    items: [
+      "Resident individual",
+      "Minor",
+      "Non Resident Indian (NRI)",
+      "Company, Partnership, HUF and LLP",
+      "Glossary",
+    ],
+    icon: <EclipseIcon />,
   },
 ];
 
@@ -48,7 +92,7 @@ const quickLinks = [
 ];
 
 const SupportCenter = () => {
-  const [openSection, setOpenSection] = useState(0);
+  const [openSection, setOpenSection] = useState(null);
 
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
@@ -59,14 +103,17 @@ const SupportCenter = () => {
       {/* LEFT SIDE */}
       <div className="md:col-span-2 flex flex-col gap-4">
         {sections.map((sec, index) => (
-          <div key={index} className="border rounded-md shadow-sm">
+          <div
+            key={index}
+            className="border rounded-md bg-white transition-all duration-200 hover:scale-[1.01] hover:shadow-md cursor-pointer overflow-hidden"
+          >
             {/* Header */}
             <button
               onClick={() => toggleSection(index)}
-              className="w-full flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 transition"
+              className="w-full flex items-center justify-between px-4 py-3 bg-whitetransition duration-300"
             >
               <div className="flex items-center gap-2">
-                <span className="text-gray-600 text-lg">◉</span>
+                <span className="text-gray-600">{sec.icon}</span>
                 <span className="font-medium text-gray-900">{sec.title}</span>
               </div>
 
@@ -77,9 +124,18 @@ const SupportCenter = () => {
               )}
             </button>
 
-            {/* Expanded Items */}
-            {openSection === index && sec.items.length > 0 && (
-              <div className="px-8 py-4 bg-white border-t">
+            {/* Smooth Dropdown */}
+            <div
+              className={`
+                overflow-hidden transition-all duration-300 ease-in-out
+                ${
+                  openSection === index
+                    ? "max-h-96 opacity-100 py-4"
+                    : "max-h-0 opacity-0 py-0"
+                }
+              `}
+            >
+              <div className="px-8 bg-white border-t">
                 <ul className="list-disc text-gray-700 flex flex-col gap-3 text-sm">
                   {sec.items.map((item, i) => (
                     <li key={i} className="hover:text-blue-600 cursor-pointer">
@@ -88,7 +144,7 @@ const SupportCenter = () => {
                   ))}
                 </ul>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>
@@ -109,8 +165,7 @@ const SupportCenter = () => {
           </ul>
         </div>
 
-        {/* Quick Links */}
-        <div className="border rounded-md shadow-sm">
+        <div className="border rounded-md shadow-sm overflow-hidden">
           <h3 className="px-4 py-2 bg-gray-100 font-medium text-gray-800 border-b">
             Quick links
           </h3>
