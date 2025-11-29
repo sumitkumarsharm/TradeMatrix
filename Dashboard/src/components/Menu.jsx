@@ -18,74 +18,82 @@ const Menu = () => {
   ];
 
   return (
-    <div className="relative w-full md:w-auto">
-      {/* Desktop Menu */}
-      <div className=" justify-between flex items-center gap-8">
-        <div className="flex justify-between gap-10 w-full">
-          <img src={logo} className="w-10" />
-          <div className="flex">
-            <ul className="flex gap-6 text-gray-700">
-              {menuItems.map((item, index) => (
-                <li key={index}>
-                  <Link to={item.to} onClick={() => setSelectedMenu(index)}>
-                    <p
-                      className={`${
-                        selectedMenu === index
-                          ? "font-semibold text-blue-600 border-b-2 border-blue-600"
-                          : "text-gray-600 hover:text-black"
-                      } pb-1`}
-                    >
-                      {item.label}
-                    </p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+    <div className="relative w-full">
+      <div className="hidden md:flex w-full  justify-between items-center gap-10">
+        <img src={logo} className="w-10" />
+        <div className="flex gap-10 items-center">
+          <ul className="flex gap-6 text-gray-700">
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <Link to={item.to} onClick={() => setSelectedMenu(index)}>
+                  <p
+                    className={`${
+                      selectedMenu === index
+                        ? "font-semibold text-blue-600 border-b-2 border-blue-600"
+                        : "text-gray-600 hover:text-black"
+                    } pb-1 transition`}
+                  >
+                    {item.label}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-            {/* Profile */}
-            <div
-              className="flex items-center gap-2 cursor-pointer ml-4"
-              onClick={() => setProfileOpen(!profileOpen)}
-            >
-              <div className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full">
-                ZU
-              </div>
-              <p className="font-medium">USERID</p>
+          {/* PROFILE */}
+          <div
+            className="flex items-center gap-2 cursor-pointer ml-4 relative"
+            onClick={() => setProfileOpen(!profileOpen)}
+          >
+            <div className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full">
+              ZU
             </div>
+            <p className="font-medium">USERID</p>
+
+            {profileOpen && (
+              <div className="absolute right-0 top-10 bg-white rounded shadow-lg py-2 w-40 z-10">
+                <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Profile
+                </p>
+                <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Logout
+                </p>
+              </div>
+            )}
           </div>
         </div>
-
-        {/* Profile Dropdown */}
-        {profileOpen && (
-          <div className="absolute right-0 mt-12 bg-white rounded shadow-lg py-2 w-40">
-            <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              Profile
-            </p>
-            <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Logout</p>
-          </div>
-        )}
       </div>
 
-      {/* Mobile Menu Button */}
-      <div className="flex md:hidden items-center gap-3">
-        <img src={logo} className="w-10" alt="kite-logo" />
+      <div className="flex md:hidden justify-between items-center gap-3">
+        <img src={logo} className="w-10" />
         <button onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+          {mobileOpen ? <HiX size={28} /> : <HiMenu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Slide Menu */}
       {mobileOpen && (
-        <div className="absolute top-14 right-0 bg-white w-48 shadow-lg rounded p-4 z-50">
+        <div className="absolute top-12 right-0 bg-white w-56 shadow-lg rounded p-4 z-50 animate-slideDown">
           {menuItems.map((item, index) => (
-            <Link key={index} to={item.to} onClick={() => setMobileOpen(false)}>
-              <p className="py-2 border-b text-gray-700">{item.label}</p>
+            <Link
+              key={index}
+              to={item.to}
+              onClick={() => {
+                setMobileOpen(false);
+                setSelectedMenu(index);
+              }}
+            >
+              <p
+                className={`py-2 border-b text-gray-700 ${
+                  selectedMenu === index ? "text-blue-600 font-semibold" : ""
+                }`}
+              >
+                {item.label}
+              </p>
             </Link>
           ))}
 
-          {/* Profile on Mobile */}
           <div
-            className="flex items-center gap-2 mt-4 pt-3 border-t cursor-pointer"
+            className="flex items-center gap-2 mt-4 cursor-pointer"
             onClick={() => setProfileOpen(!profileOpen)}
           >
             <div className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full">

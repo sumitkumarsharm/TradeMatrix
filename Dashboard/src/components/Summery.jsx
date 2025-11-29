@@ -1,7 +1,7 @@
 import React from "react";
 
 const Summery = () => {
-  return <div>Summery</div>;
+  return <div>Summerys</div>;
 };
 
 export default Summery;

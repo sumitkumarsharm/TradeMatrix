@@ -4,7 +4,7 @@ import Dashboard from "./Dashboard";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full min-h-screen bg-gray-50 ">
       <TopBar />
       <Dashboard />
     </div>
