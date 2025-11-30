@@ -19,8 +19,7 @@ const Menu = () => {
 
   return (
     <div className="relative w-full">
-      <div className="hidden md:flex w-full  justify-between items-center gap-10">
-        <img src={logo} className="w-10" />
+      <div className="hidden md:flex w-full justify-end items-center gap-10">
         <div className="flex gap-10 items-center">
           <ul className="flex gap-6 text-gray-700">
             {menuItems.map((item, index) => (
@@ -65,7 +64,6 @@ const Menu = () => {
       </div>
 
       <div className="flex md:hidden justify-between items-center gap-3">
-        <img src={logo} className="w-10" />
         <button onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <HiX size={28} /> : <HiMenu size={28} />}
         </button>

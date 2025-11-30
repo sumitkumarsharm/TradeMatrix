@@ -10,10 +10,10 @@ import Apps from "./Apps";
 
 const Dashboard = () => {
   return (
-    <div className="max-w-7xl mx-auto w-full px-3 md:px-6">
+    <div className=" mx-auto w-full  flex ">
       <WatchList />
 
-      <div className="pt-4">
+      <div className=" w-full ">
         <Routes>
           <Route path="/" element={<Summery />} />
           <Route path="/orders" element={<Orders />} />
